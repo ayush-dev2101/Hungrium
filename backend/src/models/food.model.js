@@ -15,6 +15,14 @@ const foodSchema = new mongoose.Schema({   //foodSchema is only the blueprint or
   foodPartner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "foodpartner"
+  },
+  likeCount: {
+    type: Number,
+    default: 0
+  },
+  savesCount: {
+    type: Number,
+    default: 0
   }
 })
 

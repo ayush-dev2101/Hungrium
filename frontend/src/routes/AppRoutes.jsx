@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import UserRegister from "../pages/auth/UserRegister";
 
 const AppRoutes = () => {
   return (

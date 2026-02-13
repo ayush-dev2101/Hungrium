@@ -1,0 +1,68 @@
+/* CSS Theme Variables (Light & Dark via system preference */
+:root {
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-text: #0f172a;
+  --color-text-secondary: #394658;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1b3a8d;
+  --color-danger: #a51414;
+
+
+  --raduis-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --shadow-sm: 0 1px 2px rdba(0, 0, 0, .06);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, .08), 0 2px 4px -2px rgba(0, 0, 0.04);
+
+  --transition-base: 120ms cubic-bezier(0.5, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #05080f;
+    --color-surface: #1e293b;
+    --color-border: #334155;
+    --color-text: #fcfdfd;
+    --color-text-secondary: #94a3b8;
+    --color-accent: #3581fb;
+    --color-accent-hover: #60a5fa;
+    --color-danger: #f94d4d;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 18px -5px rgba(0, 0, 0, 0.5), 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Base element theming (can be imported once golobally) */
+body {
+  font-family: var(--font-stack);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialised;   /*Look into this line */
+  line-height: 1.4;
+}
+
+a {
+  color:  var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover, a:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+::selection {background: var(--color-accent); color: #ffff;}   /*Look into this line */
