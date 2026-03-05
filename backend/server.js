@@ -7,6 +7,6 @@ console.log("ImageKit Public Key:", process.env.IMAGEKIT_PUBLIC_KEY);
 connectDB();
 
 const PORT = process.env.PORT
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
 })
