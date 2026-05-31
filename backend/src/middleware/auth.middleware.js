@@ -27,6 +27,8 @@ async function authFoodPartnerMiddleware(req, res, next) {
     })
   }
 }
+
+
 //Middleware for Users to see the stored food videos 
 async function authUserMiddleware(req, res, next) {
   const token = req.cookies.token;
